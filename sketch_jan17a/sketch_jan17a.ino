@@ -1,14 +1,18 @@
+int led = 2;
+
 void setup() {
   // put your setup code here, to run once:
-  pinMode(13, OUTPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(13,1);
-  delay(400);
-  digitalWrite(13,0);
-  delay(400);
+  digitalWrite(led,HIGH);
+  Serial.println("Prendiendo");
+  delay(1000);
+  digitalWrite(led,LOW);
+  delay(1000);
 
 }

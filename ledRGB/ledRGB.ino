@@ -15,9 +15,9 @@ void setup() {
 void loop() {
   //  colores basicos:
        // delay por pausa
-  color(255, 0, 255);
   digitalWrite(pinLedR, 1);
-  
+  digitalWrite(pinLedV, 1);
+  digitalWrite(pinLedA, 1);  
 }
 
 // funcion para generar colores
@@ -26,24 +26,3 @@ void color (int rojo, int verde, int azul) {
   analogWrite(pinLedV, verde);
   analogWrite(pinLedA, azul);
 }
-
-/*
-for(int i=0; i <= 255; i ++){
-    for(int j=b; j <= 255; j++)
-    {
-      if(j==255){
-          b = 255;
-       }
-      for(int k=a; k <= 255; k++)
-      {
-        
-        color(i, j, k);
-        if(k==255){
-          a = 255;
-        }
-        Serial.println("color(" + String(i)+"," + String(j) + ", " + String(k) +")");
-        //delay(pausa);
-      }
-    }
-  }
-*/

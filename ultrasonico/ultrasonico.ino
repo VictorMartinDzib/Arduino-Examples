@@ -1,5 +1,5 @@
-int pinTrig = 9;
-int pinEcho = 8;
+int pinTrig = 13;
+int pinEcho = 5;
 int led = 3;
 
 float medicion, distancia;
@@ -18,11 +18,6 @@ void loop() {
   //Medimos la duración del pulso o señal del pin Echo
   medicion = pulseIn(pinEcho, HIGH);
   //calculamos la distancia
-  distancia = 0.017 * medicion;
+  distancia = (medicion/2) / 29;
   Serial.println("La distancia es: " + String(distancia));
-  if(distancia < 30){
-    digitalWrite(led, 1);
-  }else{
-    digitalWrite(led, 0);
-  }
 }
